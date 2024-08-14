@@ -1,0 +1,190 @@
+/* App.css */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0.2),
+    rgba(0, 255, 98, 0.2)
+  );
+}
+
+/* App Container */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0ae;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Search Input */
+.inputsearch {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.inputsearch input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 300px;
+}
+
+.inputsearch button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inputsearch button:hover {
+  background-color: #0056b3;
+}
+
+/* Movie List */
+.movielist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Movie Card */
+.movie-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 200px;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-card .movie-details {
+  padding: 10px;
+  text-align: center;
+}
+
+.movie-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.movie-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Movie Modal */
+.movie-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: auto;
+}
+
+.movie-info .modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.movie-info .modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.movie-info .modal-content h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.movie-info .modal-content p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.movie-info .modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.movie-info .modal-content .close:hover {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .inputsearch {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inputsearch input {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+
+  .inputsearch button {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .movielist {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
